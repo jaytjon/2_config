@@ -5,7 +5,6 @@ metadata:
   namespace: fleet-local
 spec:
   branch: master
-  clientSecretName: null
   paths: []
   repo: https://github.com/jaytjon/3_deploy
   targets:
