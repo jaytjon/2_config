@@ -1,49 +1,6 @@
 apiVersion: fleet.cattle.io/v1alpha1
 kind: GitRepo
 metadata:
-  creationTimestamp: "2020-11-26T21:42:54Z"
-  generation: 1
-  managedFields:
-  - apiVersion: fleet.cattle.io/v1alpha1
-    fieldsType: FieldsV1
-    fieldsV1:
-      f:spec:
-        .: {}
-        f:branch: {}
-        f:repo: {}
-        f:targets: {}
-    manager: rancher
-    operation: Update
-  - apiVersion: fleet.cattle.io/v1alpha1
-    fieldsType: FieldsV1
-    fieldsV1:
-      f:status:
-        .: {}
-        f:conditions: {}
-        f:desiredReadyClusters: {}
-        f:display:
-          .: {}
-          f:readyBundleDeployments: {}
-          f:state: {}
-        f:observedGeneration: {}
-        f:readyClusters: {}
-        f:resourceCounts:
-          .: {}
-          f:desiredReady: {}
-          f:missing: {}
-          f:modified: {}
-          f:notReady: {}
-          f:orphaned: {}
-          f:ready: {}
-          f:unknown: {}
-          f:waitApplied: {}
-        f:summary:
-          .: {}
-          f:desiredReady: {}
-          f:ready: {}
-    manager: fleetcontroller
-    operation: Update
-    time: "2020-11-26T21:42:55Z"
   name: deploy
   namespace: fleet-local
 spec:
@@ -53,41 +10,3 @@ spec:
   repo: https://github.com/jaytjon/3_deploy
   targets:
   - clusterSelector: {}
-status:
-  conditions:
-  - lastUpdateTime: "2020-11-26T21:42:54Z"
-    status: "True"
-    type: Ready
-  - lastUpdateTime: "2020-11-26T21:42:55Z"
-    status: "True"
-    type: Accepted
-  - lastUpdateTime: "2020-11-26T21:42:55Z"
-    status: "False"
-    type: Reconciling
-  - lastUpdateTime: "2020-11-26T21:42:55Z"
-    message: 'no commit for branch: master'
-    reason: Stalled
-    status: "True"
-    type: Stalled
-  - lastUpdateTime: "2020-11-26T21:42:55Z"
-    status: "True"
-    type: Synced
-  desiredReadyClusters: 0
-  display:
-    readyBundleDeployments: 0/0
-    state: GitUpdating
-  observedGeneration: 1
-  readyClusters: 0
-  resourceCounts:
-    desiredReady: 0
-    missing: 0
-    modified: 0
-    notReady: 0
-    orphaned: 0
-    ready: 0
-    unknown: 0
-    waitApplied: 0
-  summary:
-    desiredReady: 0
-    ready: 0
-type: fleet.cattle.io.gitrepo
